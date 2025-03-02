@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<style>
+    body{
+        background-color: #d65d0e;
+        margin: 0px;
+    }
+
+    h3{
+        margin:30px 30px 20px 30px;
+        color:white;
+        font-size: 2rem;
+        font-family: "Roboto",sans-serif;
+    }
+
+    input{
+        margin:15px 30px;
+        border:none;
+        color: white;
+        border-width: 1px;
+        padding: 10px 10px;
+        background-color: #504945;
+    }
+
+    button{
+        margin: 20px 30px;
+        padding:5px;
+        border:none;
+        border-radius: 0px;
+        color: white;
+        background: repeating-linear-gradient(
+        45deg,
+        #fe8019,
+        #fe8019 15px,
+        #504945 15px,
+        #504945 30px
+        );
+    }
+
+    button:hover{
+        background: repeating-linear-gradient(
+        45deg,
+        #fe8019,
+        #fe8019 15px,
+        black 15px,
+        black 30px
+        );
+    }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #504945;
+    color: rgb(0, 0, 0);
+    }
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+    vertical-align:bottom;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+#projlist{
+    padding:0px;
+    margin:10px;
+    display: flex;
+}
+
+</style>
+</head>
+<title>Projektseite</title>
+<body>
+    <header class="header">
+        <div class="logo">
+            <!--<img src="/images/logo_192.png">-->
+            <a href="/index.html">ASPERA<br/>MANUFACTURING</a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <a href="/index.html">Katalog</a>
+                <a href="/order.html">Vorschlag</a>
+            </ul>
+        </nav>
+    </header>
+    <h3 class="title">Vorschlag</h3>
+    <div><input id="name"placeholder="Name"></div>
+    <div><input id="desc"placeholder="Beschreibung"></div>
+    <div><input id="till"placeholder="Bis wann?"></div>
+    <div><button class="send" onClick="clicked()">Vorschlag senden</button></div>
+    <script>
+        const input = document.getElementById("name");
+        function clicked(){
+            console.log(input.value);
+        }
+        </script>
+</body>
