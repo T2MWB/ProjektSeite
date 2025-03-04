@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <style>
     body{
-        background-color: #d65d0e;
+        background-color: #282828;
         margin: 0px;
     }
-
-
-    .project {
-        margin: 5px;
-        padding: 15px;
-        background-color: white;
-        color: black;
-        font-family: "Roboto", sans-serif;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        background-color: #504945;
+        color: rgb(0, 0, 0);
     }
-
-    .project p{
-        margin:0;
-        padding-top: 10px;
-        font-size: 1.5rem;
+    .logo a {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
         font-weight: bold;
     }
-
-    .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: #504945;
-    color: rgb(0, 0, 0);
+    .logo img {
+        width: 150px;
+        vertical-align:bottom;
+        padding-right: 20px;
     }
-
-.logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.logo img {
-    width: 50px;
-    vertical-align:bottom;
-    padding-right: 20px;
-    border-radius: 20px;
-}
-
-.navigation ul {
-    display: flex;
-    list-style: none;
-}
-
-.navigation ul a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    padding: 5px 20px;
-    transition: background-color 0.3s ease;
-}
-
-.navigation ul li a:hover {
+    .navigation ul {
+        display: flex;
+        list-style: none;
+    }
+    .navigation ul a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        font-family: "Roboto",sans-serif;
+        padding: 5px 20px;
+        transition: background-color 0.3s ease;
+    }
+    .navigation ul li a:hover {
     background-color: #444;
     border-radius: 5px;
-}
+    }
 
-#projlist{
-    padding:0px;
-    margin:10px;
-    display: flex;
-}
+    .intro{
+        margin: 35px 0px 40px 0px ;
+        font-size: 3rem;
+        font-family: "Roboto",sans-serif;
+        font-weight: 800;
+        color: white;
+    }
 
-</style>
-</head>
-<title>Projektseite</title>
-<body>
-    <header class="header">
-        <div class="logo">
-            <!--<img src="/images/logo_192.png">-->
-            <a href="/index.html">ASPERA<br/>MANUFACTURING</a>
-        </div>
-        <nav class="navigation">
-            <ul>
-                <a href="/index.html">Katalog</a>
-                <a href="/order.html">Vorschlag</a>
-            </ul>
-        </nav>
+    #dictionary{
+        background-color: #a89984;
+        padding: 330px 0px 70px 100px;
+    }
 
-</header>
-<div id="projlist">
-
-</div>
-<script>
-    fetch('elements.json')
-        .then(response => response.json())
-        .then(data => {
-            const list = document.getElementById("projlist");
-            data.elements.forEach(element => {
-                const link = document.createElement('a');
-                link.href = "/"+element.short+".html";
-                const container = document.createElement('div');
-                container.style.width = "150px";
-                container.classList.add("project");
-                const image = document.createElement('img');
-                image.src = element.img;
-                image.style.width="150px";
-                const name = document.createElement("p");
-                name.textContent = element.name;
-                container.appendChild(image);
-                container.appendChild(name);
-                link.appendChild(container);
-                list.appendChild(link);
-            })
-        })
-        .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
-</script>
+    #dictionary h3{
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+        font-family: "Roboto",sans-serif;
+        color:white;
+    }
+    #about{
+        margin-left: 40px;
+    }
+    .mainp{
+        font-size: 1.2rem;
+        margin: 5px 0px 5px 0px;
+        font-family: "Roboto",sans-serif;
+        color:white;
+    }
+    .subp{
+        font-size: 1.2rem;
+        margin: 5px 0px 5px 0px;
+        font-family: "Roboto",sans-serif;
+        color:rgb(255, 255, 255, 0.6);
+    }
+    .subh{
+        font-size: 2rem;
+        font-family: "Roboto",sans-serif;
+        font-weight: 700;
+        color: white; 
+    }
+    </style>
+    </head>
+    <title>tuelp</title>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <!--<img src="/images/logo_192.png">-->
+                <a href="/index.html"><img  style="width:150px" src="tuelpFinal.png"></a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <a href="/catalogue.html">Katalog</a>
+                    <a href="/order.html">Vorschlag</a>
+                </ul>
+            </nav>
+    </header>
+    <div id="dictionary">
+        <h3>tuelp</h3>
+        <p class="mainp">/t​ʏlp/</p>
+        <p class="subp">Substantiv, neutral [ die, der, der ]</p>
+        <p class="mainp">1. Das beste aus Tulpe und Tulip, eingedeutscht</p>
+        <p class="mainp">2. Die neusten Updates zu coolio Projekten</p>
+        <p class="mainp">3. "Tammos Un-Endlicher Listen Plan", Akronym (oder so)</p>
+    </div>
+    <div id="about">
+        <h1 class="intro">ÜBER TUELP</h1>
+        <p class="subh" style="margin:0px 0px 10px 0px">Die Idee</p>
+        <p class="mainp" style="margin:0px 0px 40px 0px">tuelp steht als Akronym für "Tammos UnEndliche Liste an Plänen".</br>
+        Ich bin Tammo und habe echt viele Ideen, aber nicht immer die Motivation diese durchzuführen,</br>
+        weshalb Leute oft fragen wann denn meine Projekte fertig werden.</br>
+        Die Seite wurde ins Leben gerufen, um über den Status meiner Projekte zu informieren, </br>
+        vorallem wenn sie für jemanden gemacht werden.</br>
+        Für eine Sammlung meiner Projekte kannst du einfach mal unter <a href="/catalogue.html">Katalog</a> nachschauen</p>
+    </div>
 </body>

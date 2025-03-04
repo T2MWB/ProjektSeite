@@ -138,10 +138,9 @@ body{
 }
 
 .logo img {
-    width: 50px;
+    width: 150px;
     vertical-align:bottom;
     padding-right: 20px;
-    border-radius: 20px;
 }
 
 .navigation ul {

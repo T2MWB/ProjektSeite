@@ -3,15 +3,15 @@
     "short":"jinx",
     "client":"Tay",
     "desc":"Fertigung einer Replika der Pistole von Jinx aus Arcane",
-    "img":"/pistolprev.png",
+    "img":"/pistolprev.jpg",
 "parts":[
     {
-    "part": "Lauf 1",
+    "part": "Bügel",
     "stats":[0,0,0],
     "pos":[110, 360]
 },
 {
-    "part": "Bügel",
+    "part": "Lauf 1",
     "stats":[0,0,0],
     "pos":[200, 200]
 },
