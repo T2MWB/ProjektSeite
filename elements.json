@@ -7,37 +7,37 @@
 "parts":[
     {
     "part": "Bügel",
-    "stats":[0,0,0],
+    "stats":[2,0,0],
     "pos":[110, 360]
 },
 {
     "part": "Lauf 1",
-    "stats":[0,0,0],
+    "stats":[1,0,0],
     "pos":[200, 200]
 },
 {
     "part": "Ring 1",
-    "stats":[0,0,0],
+    "stats":[2,0,0],
     "pos":[200, 355]
 },
 {
     "part": "Lauf 2",
-    "stats":[0,0,0],
+    "stats":[1,0,0],
     "pos":[200, 440]
 },
 {
     "part": "Ring 2.1",
-    "stats":[0,0,0],
+    "stats":[2,0,0],
     "pos":[200, 545]
 },
 {
     "part": "Ring 2.2",
-    "stats":[0,0,0],
+    "stats":[2,0,0],
     "pos":[200, 600]
 },
 {
     "part": "Ring 2.3",
-    "stats":[0,0,0],
+    "stats":[2,0,0],
     "pos":[200, 655]
 },
 {
@@ -97,17 +97,17 @@
 },
 {
     "part": "Griff",
-    "stats":[0,0,0],
+    "stats":[2,0,0],
     "pos":[340, 750]
 },
 {
     "part": "Griffholz",
-    "stats":[0,0,0],
+    "stats":[1,0,0],
     "pos":[450, 830]
 },
 {
     "part": "Griffbasis",
-    "stats":[0,0,0],
+    "stats":[2,0,0],
     "pos":[625, 850]
 },
 {
