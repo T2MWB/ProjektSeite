@@ -1,0 +1,33 @@
+{
+    "name":"BlastX Spectre",
+    "short":"blastx",
+    "client":"Tay",
+    "desc":"Replica of the BlastX Skin for Valorant's Spectre Weapon",
+    "img":"/pistolprev.jpg",
+    "parts":[
+        {
+        "name":"Barrel",
+        "status":0
+        },
+        {
+        "name":"Body",
+        "status":0
+        },
+        {
+        "name":"Details",
+        "status":0
+        },
+        {
+        "name":"Magazine",
+        "status":0
+        },
+        {
+        "name":"Rearstock",
+        "status":0
+        },
+        {
+        "name":"Magazine",
+        "status":0
+        }
+    ]
+}

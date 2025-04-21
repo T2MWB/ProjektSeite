@@ -3,13 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="{{url_for('static',filename='favicon.ico')}}">
 <style>
     body{
         background-color: #282828;
         margin: 0px;
+        padding-top: 110px;
     }
     .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -92,12 +97,12 @@
         <header class="header">
             <div class="logo">
                 <!--<img src="/images/logo_192.png">-->
-                <a href="/index.html"><img  style="width:150px" src="tuelpFinal.png"></a>
+                <a href="/"><img  style="width:150px" src="{{url_for('static', filename='tuelpLogo.png')}}"></a>
             </div>
             <nav class="navigation">
                 <ul>
-                    <a href="/catalogue.html">Katalog</a>
-                    <a href="/order.html">Vorschlag</a>
+                    <a href="/catalogue">Katalog</a>
+                    <a href="/order">Vorschlag</a>
                 </ul>
             </nav>
     </header>
@@ -117,6 +122,6 @@
         weshalb Leute oft fragen wann denn meine Projekte fertig werden.</br>
         Die Seite wurde ins Leben gerufen, um über den Status meiner Projekte zu informieren, </br>
         vorallem wenn sie für jemanden gemacht werden.</br>
-        Für eine Sammlung meiner Projekte kannst du einfach mal unter <a href="/catalogue.html">Katalog</a> nachschauen</p>
+        Für eine Sammlung meiner Projekte kannst du einfach mal unter <a href="/catalogue">Katalog</a> nachschauen</p>
     </div>
 </body>
