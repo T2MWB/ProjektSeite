@@ -1,0 +1,30 @@
+{
+    "name":"Arcane Gear",
+    "credits":"arcane // own creation",
+    "desc":"Recreation of Victor's gear from the Arcane Series",
+    "projNumber":"01",
+    "orderNumber":"00",
+    "colors":[
+        {
+            "name":"bg","hex":"#7700ff"
+        },
+        {
+            "name":"lapse-default","hex":"#F9882C"
+        },
+        {
+            "name":"lapse-clicked","hex":"#FFFFFF"
+        },
+        {
+            "name":"lapse-expanded","hex":"#00FF00"
+        },
+        {
+            "name":"image-bg","hex":"#40008E"
+        },
+        {
+            "name":"image-highlight","hex":"#ffff00"
+        }],
+    "file":"/static/models/gear.glb",
+    "parts":[
+        {"name":"gear"}
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "projects":[
+        {"name":"gear","state":1},
+        {"name":"twods","state":1},
+        {"name":"jinx","state":0},
+        {"name":"blastx","state":0}]
+}

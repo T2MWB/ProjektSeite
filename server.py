@@ -1,5 +1,6 @@
 import json
 from flask import Flask,render_template,jsonify,send_from_directory
+from pathlib import Path
 
 app = Flask(__name__)
 
@@ -15,19 +16,17 @@ def catalogue():
 def order():
     return render_template('order.html')
 
-@app.route('/catalogue/jinx')
-def jinx():
-    return render_template('jinx.html')
-
-@app.route('/catalogue/blastx')
-def blastx():
-    return render_template('blastx.html')
-
+@app.route('/catalogue/<project>')
+def project(project):
+    #if Path(f"static/data/{project}.json").exists():
+    return render_template('project.html', data = project)
+    #else:
+    #    return render_template('404.html')
 
 @app.route('/api/data/<project>')
 def file_data(project):
     try:
-        return send_from_directory('static/data', f'{project}.json')
+        return send_from_directory('static/data/projects', f'{project}.json')
     except Exception as e:
         return jsonify({'error': f'Fehler: {str(e)}'}), 500
     

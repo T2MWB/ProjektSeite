@@ -4,96 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='favicon.ico')}}">
-<style>
-    body{
-        background-color: #d65d0e;
-        margin: 0px;
-        padding-top: 110px;
-    }
-
-    .intro{
-            margin: 10px 0px 0px 15px;
-            font-size: 3rem;
-            font-family: "Roboto",sans-serif;
-            font-weight: 800;
-            color: white;
+    <link rel="stylesheet" href="{{ url_for('static',filename='cataloguestyle.css') }}">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.175.0/examples/jsm/"
+          }
         }
-
-    .mainp{
-            font-size: 1.2rem;
-            margin: 0px 0px 5px 15px;
-            font-family: "Roboto",sans-serif;
-            color:white;
-    }
-
-    .project {
-        margin: 5px;
-        padding: 15px;
-        background-color: white;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-
-    .project p{
-        margin:0;
-        padding-top: 10px;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: #504945;
-    color: rgb(0, 0, 0);
-    }
-
-.logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.logo img {
-    width: 150px;
-    vertical-align:bottom;
-    padding-right: 20px;
-}
-
-.navigation ul {
-    display: flex;
-    list-style: none;
-}
-
-.navigation ul a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.5rem;
-        font-family: "Roboto",sans-serif;
-        padding: 5px 20px;
-        transition: background-color 0.3s ease;
-    }
-    .navigation ul li a:hover {
-    background-color: #444;
-    border-radius: 5px;
-    }
-#projlist{
-    padding:0px;
-    margin:10px;
-    display: flex;
-}
-
-</style>
+    </script>
+    <title>Catalogue</title>
 </head>
-<title>Projektseite</title>
+
 <body>
     <header class="header">
         <div class="logo">
@@ -108,34 +30,16 @@
         </nav>
 
 </header>
-<h1 class="intro">IN ARBEIT</h1>
-<p class="mainp">Aktuelle Projekte, an denen ich arbeite</p>
-<div id="projlist"></div>
-<h1 class="intro">FERTIG</h1>
-<p class="mainp">Vergangene Projekte, die schon fertig sind</p>
-<p class="mainp" style="margin:70px 0px 0px 40px">Noch keine, ich werde die Seite noch updaten :)</p>
-<script>
-    fetch('elements.json')
-        .then(response => response.json())
-        .then(data => {
-            const list = document.getElementById("projlist");
-            data.elements.forEach(element => {
-                const link = document.createElement('a');
-                link.href = "/"+element.short+".html";
-                const container = document.createElement('div');
-                container.style.width = "150px";
-                container.classList.add("project");
-                const image = document.createElement('img');
-                image.src = element.img;
-                image.style.width="150px";
-                const name = document.createElement("p");
-                name.textContent = element.name;
-                container.appendChild(image);
-                container.appendChild(name);
-                link.appendChild(container);
-                list.appendChild(link);
-            })
-        })
-        .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
+    <h1 class="intro">IN ARBEIT</h1>
+    <p class="mainp">Aktuelle Projekte, an denen ich arbeite</p>
+    <div id="inProgress"></div>
+<div id="done">
+    <h1 class="intro">FERTIG</h1>
+    <p class="mainp">Vergangene Projekte, die schon fertig sind</p>
+    <div id="finished"></div>
+    <!--<p class="mainp" style="margin:70px 0px 0px 40px">Noch keine, ich werde die Seite noch updaten :)</p>-->
+</div>
+<script type = "module" src = "{{url_for('static', filename='catalogue.js')}}">
+    
 </script>
 </body>
