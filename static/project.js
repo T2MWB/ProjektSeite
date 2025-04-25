@@ -4,8 +4,12 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const projektname = document.URL.substring(document.URL.lastIndexOf("/") + 1);
 document.title = projektname;
+
 //get data from JSON files
-fetch(`/api/data/${projektname}`)
+const ORIGIN = window.location.origin;
+const ENDPOINT = `${ORIGIN}/api/data/${projektname}`;
+
+fetch(ENDPOINT)
 .then(response => response.json())
 .then(elements =>{
   const parts = {};

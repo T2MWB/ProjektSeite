@@ -7,7 +7,11 @@ const sceneHeight = 150;
 const projektname = "index";
 const progressList = document.getElementById("inProgress")
 const finishedList = document.getElementById("finished");
-fetch(`/api/data/${projektname}`)
+
+const ORIGIN = window.location.origin;
+const ENDPOINT = `${ORIGIN}/api/data/${projektname}`;
+
+fetch(ENDPOINT)
     .then(response => response.json())
     .then(data => {
         data.projects.forEach(element => {
