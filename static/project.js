@@ -2,7 +2,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-const projektname = document.URL.substring(document.URL.lastIndexOf("/") + 1);
+const projektname = window.location.pathname.split('/').slice(-2, -1)[0];
+console.log(projektname);
 document.title = projektname;
 
 //get data from JSON files
