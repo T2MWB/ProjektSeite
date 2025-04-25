@@ -1,68 +1,138 @@
 {
-    "name":"JINX'S GUN",
-    "credits":"arcane // 3d-mon",
-    "desc":"Replica Jinx's Gun from Arcane",
-    "projNumber":"03",
-    "orderNumber":"00",
-    "colors":[
+    "name": "JINX'S GUN",
+    "credits": "arcane // 3d-mon",
+    "desc": "Replica Jinx's Gun from Arcane",
+    "projNumber": "03",
+    "orderNumber": "00",
+    "colors": [
         {
-            "name":"bg","hex":"#d7cbdf"
+            "name": "bg",
+            "hex": "#d7cbdf"
         },
         {
-            "name":"lapse-default","hex":"#7c7096"
+            "name": "lapse-default",
+            "hex": "#7c7096"
         },
         {
-            "name":"lapse-clicked","hex":"#7e6792"
+            "name": "lapse-clicked",
+            "hex": "#7e6792"
         },
         {
-            "name":"lapse-expanded","hex":"#c174b6"
+            "name": "lapse-expanded",
+            "hex": "#c174b6"
         },
         {
-            "name":"image-bg","hex":"#f2f2f2"
+            "name": "image-bg",
+            "hex": "#f2f2f2"
         },
         {
-            "name":"image-highlight","hex":"#875484"
-        }],
-    "file":"/static/models/jinx.glb",
-    "parts":[
+            "name": "image-highlight",
+            "hex": "#875484"
+        }
+    ],
+    "file": "/static/models/jinx.glb",
+    "parts": [
         {
-        "name":"barrel",
-        "status":0,
-        "sub":[
-            {"name":"Barrel 1","date":"none"},
-            {"name":"Center Ring","date":"none"},
-            {"name":"Barrel 2","date":"none"},
-            {"name":"Top Bar","date":"none"}
-        ]
+            "name": "barrel",
+            "status": 0,
+            "sub": [
+                {
+                    "name": "Barrel 1",
+                    "date": "none"
+                },
+                {
+                    "name": "Center Ring",
+                    "date": "none"
+                },
+                {
+                    "name": "Barrel 2",
+                    "date": "none"
+                },
+                {
+                    "name": "Top Bar",
+                    "date": "none"
+                }
+            ]
         },
         {
-        "name":"head",
-        "status":0,
-        "sub":[
-            {"name":"Handle Ring 1","date":"none"},
-            {"name":"Handle Ring 2","date":"none"},
-            {"name":"Handle Ring 3","date":"none"},
-            {"name":"Housing","date":"none"},
-            {"name":"Spike 1","date":"none"},
-            {"name":"Spike 2","date":"none"},
-            {"name":"Spike 3","date":"none"},
-            {"name":"Exhaust","date":"none"},
-            {"name":"Lever","date":"none"},
-            {"name":"Underguard","date":"none"},
-            {"name":"Screw","date":"none"},
-            {"name":"Finger Guard","date":"none"}
-        ]
+            "name": "head",
+            "status": 0,
+            "sub": [
+                {
+                    "name": "Handle Ring 1",
+                    "date": "none"
+                },
+                {
+                    "name": "Handle Ring 2",
+                    "date": "none"
+                },
+                {
+                    "name": "Handle Ring 3",
+                    "date": "none"
+                },
+                {
+                    "name": "Housing",
+                    "date": "none"
+                },
+                {
+                    "name": "Spike 1",
+                    "date": "none"
+                },
+                {
+                    "name": "Spike 2",
+                    "date": "none"
+                },
+                {
+                    "name": "Spike 3",
+                    "date": "none"
+                },
+                {
+                    "name": "Exhaust",
+                    "date": "none"
+                },
+                {
+                    "name": "Lever",
+                    "date": "none"
+                },
+                {
+                    "name": "Underguard",
+                    "date": "none"
+                },
+                {
+                    "name": "Screw",
+                    "date": "none"
+                },
+                {
+                    "name": "Finger Guard",
+                    "date": "none"
+                }
+            ]
         },
         {
-        "name":"handle",
-        "status":0,
-        "sub":[
-            {"name":"Top Plate","date":"none"},
-            {"name":"Middle Handle","date":"none"},
-            {"name":"Side Handle Left","date":"none"},
-            {"name":"Side Handle Right","date":"none"},
-            {"name":"Bottom Plate","date":"none"}
-        ]
+            "name": "handle",
+            "status": 0,
+            "sub": [
+                {
+                    "name": "Top Plate",
+                    "date": "none"
+                },
+                {
+                    "name": "Middle Handle",
+                    "date": "none"
+                },
+                {
+                    "name": "Side Handle Left",
+                    "date": "none"
+                },
+                {
+                    "name": "Side Handle Right",
+                    "date": "none"
+                },
+                {
+                    "name": "Bottom Plate",
+                    "date": "none"
+                }
+            ]
         }
     ]
 }
