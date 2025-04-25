@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='favicon.ico')}}">
-<style>
-    body{
-        background-color: #d65d0e;
-        margin: 0px;
-    }
+    <style>
+        body {
+            background-color: #d65d0e;
+            margin: 0px;
+        }
 
-    .intro{
-        margin: 10px 0px 40px 15px ;
-        font-size: 3rem;
-        font-family: "Roboto",sans-serif;
-        font-weight: 800;
-        color: white;
-    }
-    input{
-        margin:15px 30px;
-        border:none;
-        color: black;
-        border-width: 1px;
-        padding: 10px 10px;
-        background-color: #7c6f64;
-    }
+        .intro {
+            margin: 10px 0px 40px 15px;
+            font-size: 3rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 800;
+            color: white;
+        }
 
-    button{
-        margin: 20px 30px;
-        padding:5px;
-        border:none;
-        border-radius: 0px;
-        color: white;
-        background: #504945;
-    }
+        input {
+            margin: 15px 30px;
+            border: none;
+            color: black;
+            border-width: 1px;
+            padding: 10px 10px;
+            background-color: #7c6f64;
+        }
 
-    button:hover{
-        background: black;
-    }
+        button {
+            margin: 20px 30px;
+            padding: 5px;
+            border: none;
+            border-radius: 0px;
+            color: white;
+            background: #504945;
+        }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: #504945;
-    color: rgb(0, 0, 0);
-    }
+        button:hover {
+            background: black;
+        }
 
-.logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #504945;
+            color: rgb(0, 0, 0);
+        }
 
-.logo img {
-    width: 50px;
-    vertical-align:bottom;
-    padding-right: 20px;
-}
+        .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
 
-.navigation ul {
-    display: flex;
-    list-style: none;
-}
+        .logo img {
+            width: 50px;
+            vertical-align: bottom;
+            padding-right: 20px;
+        }
 
-.navigation ul a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.5rem;
-        font-family: "Roboto",sans-serif;
-        padding: 5px 20px;
-        transition: background-color 0.3s ease;
-    }
-    .navigation ul li a:hover {
-    background-color: #444;
-    border-radius: 5px;
-    }
+        .navigation ul {
+            display: flex;
+            list-style: none;
+        }
 
-#projlist{
-    padding:0px;
-    margin:10px;
-    display: flex;
-}
+        .navigation ul a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-family: "Roboto", sans-serif;
+            padding: 5px 20px;
+            transition: background-color 0.3s ease;
+        }
 
-#form{
-    width: 300px;
-    margin-left: 40px;
-}
+        .navigation ul li a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
 
-</style>
+        #projlist {
+            padding: 0px;
+            margin: 10px;
+            display: flex;
+        }
+
+        #form {
+            width: 300px;
+            margin-left: 40px;
+        }
+    </style>
 </head>
 <title>Vorschlag</title>
+
 <body>
     <header class="header">
         <div class="logo">
             <!--<img src="/images/logo_192.png">-->
-            <a href="/"><img  style="width:150px" src="{{url_for('static', filename='tuelpLogo.png')}}"></a>
+            <a href="/"><img style="width:150px" src="{{url_for('static', filename='tuelpLogo.png')}}"></a>
         </div>
         <nav class="navigation">
             <ul>
@@ -106,18 +109,18 @@
             </ul>
         </nav>
 
-</header>
-<h3 class="intro">VORSCHLAG</h3>
-<div id="form">
-    <input id="name"placeholder="Projektname">
-    <input id="desc"placeholder="Beschreibung">
-    <input id="till"placeholder="Dein Name">
-    <input id="till"placeholder="Bis wann?">
-    <button class="send" onClick="clicked()">Vorschlag senden</button>
-</div>
-<script> 
-    function clicked(){
-        console.log("Hey, du hast den Knopf gedrückt! Bitte warte ein bisschen, bis wir uns diesem Bereich annehmen können..");
-    }
-</script>
+    </header>
+    <h3 class="intro">VORSCHLAG</h3>
+    <div id="form">
+        <input id="name" placeholder="Projektname">
+        <input id="desc" placeholder="Beschreibung">
+        <input id="till" placeholder="Dein Name">
+        <input id="till" placeholder="Bis wann?">
+        <button class="send" onClick="clicked()">Vorschlag senden</button>
+    </div>
+    <script>
+        function clicked() {
+            console.log("Hey, du hast den Knopf gedrückt! Bitte warte ein bisschen, bis wir uns diesem Bereich annehmen können..");
+        }
+    </script>
 </body>

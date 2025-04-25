@@ -1,45 +1,52 @@
 {
-    "name":"BlastX Spectre",
-    "credits":"valorant // shellshocked props",
-    "desc":"Replica of the BlastX Skin for Valorant's Spectre Weapon",
-    "projNumber":"04",
-    "orderNumber":"00",
-    "colors":[
+    "name": "BlastX Spectre",
+    "credits": "valorant // shellshocked props",
+    "desc": "Replica of the BlastX Skin for Valorant's Spectre Weapon",
+    "projNumber": "04",
+    "orderNumber": "00",
+    "colors": [
         {
-            "name":"bg","hex":"#7700ff"
+            "name": "bg",
+            "hex": "#7700ff"
         },
         {
-            "name":"lapse-default","hex":"#F9882C"
+            "name": "lapse-default",
+            "hex": "#F9882C"
         },
         {
-            "name":"lapse-clicked","hex":"#FFFFFF"
+            "name": "lapse-clicked",
+            "hex": "#FFFFFF"
         },
         {
-            "name":"lapse-expanded","hex":"#00FF00"
+            "name": "lapse-expanded",
+            "hex": "#00FF00"
         },
         {
-            "name":"image-bg","hex":"#40008E"
+            "name": "image-bg",
+            "hex": "#40008E"
         },
         {
-            "name":"image-highlight","hex":"#ffff00"
-        }],
-    "file":"/static/models/blastx.glb",
-    "parts":[
+            "name": "image-highlight",
+            "hex": "#ffff00"
+        }
+    ],
+    "file": "/static/models/blastx.glb",
+    "parts": [
         {
-        "name":"barrel",
-        "status":0
+            "name": "barrel",
+            "status": 0
         },
         {
-        "name":"body",
-        "status":0
+            "name": "body",
+            "status": 0
         },
         {
-        "name":"magazine",
-        "status":0
+            "name": "magazine",
+            "status": 0
         },
         {
-        "name":"rearstock",
-        "status":0
+            "name": "rearstock",
+            "status": 0
         }
     ]
 }

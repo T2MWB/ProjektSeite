@@ -1,30 +1,39 @@
 {
-    "name":"2DS Packaging",
-    "credits":"nintendo // own creation",
-    "desc":"Packaging for a 2DS Console",
-    "projNumber":"02",
-    "orderNumber":"00",
-    "colors":[
+    "name": "2DS Packaging",
+    "credits": "nintendo // own creation",
+    "desc": "Packaging for a 2DS Console",
+    "projNumber": "02",
+    "orderNumber": "00",
+    "colors": [
         {
-            "name":"bg","hex":"#7700ff"
+            "name": "bg",
+            "hex": "#7700ff"
         },
         {
-            "name":"lapse-default","hex":"#F9882C"
+            "name": "lapse-default",
+            "hex": "#F9882C"
         },
         {
-            "name":"lapse-clicked","hex":"#FFFFFF"
+            "name": "lapse-clicked",
+            "hex": "#FFFFFF"
         },
         {
-            "name":"lapse-expanded","hex":"#00FF00"
+            "name": "lapse-expanded",
+            "hex": "#00FF00"
         },
         {
-            "name":"image-bg","hex":"#40008E"
+            "name": "image-bg",
+            "hex": "#40008E"
         },
         {
-            "name":"image-highlight","hex":"#ffff00"
-        }],
-    "file":"/static/models/twods.glb",
-    "parts":[
-        {"name":"twods"}
+            "name": "image-highlight",
+            "hex": "#ffff00"
+        }
+    ],
+    "file": "/static/models/twods.glb",
+    "parts": [
+        {
+            "name": "twods"
+        }
     ]
 }

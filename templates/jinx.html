@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='favicon.ico')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<title>Projektübersicht</title>
+    <title>Projektübersicht</title>
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
             <!--<img src="/images/logo_192.png">-->
-            <a href="/"><img  style="width:150px" src="{{url_for('static', filename='tuelpLogo.png')}}"></a>
+            <a href="/"><img style="width:150px" src="{{url_for('static', filename='tuelpLogo.png')}}"></a>
         </div>
         <nav class="navigation">
             <ul>
@@ -21,76 +23,87 @@
             </ul>
         </nav>
 
-</header>
+    </header>
 
-<div class="project-content">
-    <div id="project-image"><img src="{{url_for('static', filename='Weapon.jpg')}}" style="width:970px;"></div>
-    <div id="status">
-        <h1 id="projectTitle">Projekt::Jinx Waffe - 23.4%</h1>                                 <!--TODO das über Status und Status weg-->
-        <p>fertig/angefangen</p>
-        <div><p class="stattext">Gedruckt</p><p id="stat1">40%/20%</p></div>
-        <div><p class="stattext">Geschliffen</p><p id="stat2">40%/20%</p></div>
-        <div><p class="stattext">Bemalt</p><p id="stat3">40%/20%</p></div>
-        <ul id="list-append">   
-        </ul>
+    <div class="project-content">
+        <div id="project-image"><img src="{{url_for('static', filename='Weapon.jpg')}}" style="width:970px;"></div>
+        <div id="status">
+            <h1 id="projectTitle">Projekt::Jinx Waffe - 23.4%</h1> <!--TODO das über Status und Status weg-->
+            <p>fertig/angefangen</p>
+            <div>
+                <p class="stattext">Gedruckt</p>
+                <p id="stat1">40%/20%</p>
+            </div>
+            <div>
+                <p class="stattext">Geschliffen</p>
+                <p id="stat2">40%/20%</p>
+            </div>
+            <div>
+                <p class="stattext">Bemalt</p>
+                <p id="stat3">40%/20%</p>
+            </div>
+            <ul id="list-append">
+            </ul>
+        </div>
     </div>
-</div>
     <script>
         fetch('elements.json')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            const container = document.getElementById('project-image');
-            data.elements.forEach(element => {                                                 //TODO make this work for indices (wtf did i mean by this) because rn it goes over every Project (foreach)
-                const finished = [0,0,0];
-                const overall = [0,0,0];
-                element.parts.forEach(element =>{
-                //Distribute Dots across the Image
-                const dot = document.createElement('div');
-                dot.classList.add('part');
-                dot.style.top = element.pos[0]+'px';
-                dot.style.left = element.pos[1]+'px';
-                container.appendChild(dot);
-                //Add textbox directly next to Dots
-                const textbox = document.createElement('div');
-                textbox.classList.add('textbox');
-                textbox.style.zIndex = 1;
-                textbox.style.top = element.pos[0]+'px';
-                textbox.style.left = element.pos[1]+40+'px';
-                //Populate Textbox - Header
-                const name = document.createElement('h3');
-                name.textContent = element.part;
-                textbox.appendChild(name);
-                //Textbox - Statusbar
-                const statusBar = document.createElement('div');
-                const stat = document.createElement('p');
-                stat.style.listStyleType = 'none';
-                element.stats.forEach((status, index) =>{
-                    if(status==0){stat.textContent += '❌';}
-                    else if(status==1){stat.textContent += '⏳';}
-                    else if(status==2){stat.textContent += '✔';finished[index]++;}
-                    if(index== 0){stat.textContent += 'Gedruckt\n';}
-                    else if (index == 1){stat.textContent += 'Geschliffen\n';}
-                    else if (index == 2){stat.textContent += 'Bemalt\n';}
-                    statusBar.appendChild(stat);
-                    overall[index]++;
-                    
-                })
-                const stat1 = document.getElementById("stat1");
-                const stat2 = document.getElementById("stat2");
-                const stat3 = document.getElementById("stat3");
-                stat1.textContent = finished[0]+"/"+overall[0];
-                stat2.textContent = finished[1]+"/"+overall[1];
-                stat3.textContent = finished[2]+"/"+overall[2];
-                //TODO Progress Bar vlt, bei lesen der JSON jedem Punkt ne klasse vergeben ob "printed", "sanded", "painted" und dann bei Hover über status die Farbe verändern
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                const container = document.getElementById('project-image');
+                data.elements.forEach(element => {                                                 //TODO make this work for indices (wtf did i mean by this) because rn it goes over every Project (foreach)
+                    const finished = [0, 0, 0];
+                    const overall = [0, 0, 0];
+                    element.parts.forEach(element => {
+                        //Distribute Dots across the Image
+                        const dot = document.createElement('div');
+                        dot.classList.add('part');
+                        dot.style.top = element.pos[0] + 'px';
+                        dot.style.left = element.pos[1] + 'px';
+                        container.appendChild(dot);
+                        //Add textbox directly next to Dots
+                        const textbox = document.createElement('div');
+                        textbox.classList.add('textbox');
+                        textbox.style.zIndex = 1;
+                        textbox.style.top = element.pos[0] + 'px';
+                        textbox.style.left = element.pos[1] + 40 + 'px';
+                        //Populate Textbox - Header
+                        const name = document.createElement('h3');
+                        name.textContent = element.part;
+                        textbox.appendChild(name);
+                        //Textbox - Statusbar
+                        const statusBar = document.createElement('div');
+                        const stat = document.createElement('p');
+                        stat.style.listStyleType = 'none';
+                        element.stats.forEach((status, index) => {
+                            if (status == 0) { stat.textContent += '❌'; }
+                            else if (status == 1) { stat.textContent += '⏳'; }
+                            else if (status == 2) { stat.textContent += '✔'; finished[index]++; }
+                            if (index == 0) { stat.textContent += 'Gedruckt\n'; }
+                            else if (index == 1) { stat.textContent += 'Geschliffen\n'; }
+                            else if (index == 2) { stat.textContent += 'Bemalt\n'; }
+                            statusBar.appendChild(stat);
+                            overall[index]++;
 
-                textbox.appendChild(statusBar);
-                container.appendChild(textbox);
-        })});
+                        })
+                        const stat1 = document.getElementById("stat1");
+                        const stat2 = document.getElementById("stat2");
+                        const stat3 = document.getElementById("stat3");
+                        stat1.textContent = finished[0] + "/" + overall[0];
+                        stat2.textContent = finished[1] + "/" + overall[1];
+                        stat3.textContent = finished[2] + "/" + overall[2];
+                        //TODO Progress Bar vlt, bei lesen der JSON jedem Punkt ne klasse vergeben ob "printed", "sanded", "painted" und dann bei Hover über status die Farbe verändern
 
-          })
-          .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
+                        textbox.appendChild(statusBar);
+                        container.appendChild(textbox);
+                    })
+                });
+
+            })
+            .catch(error => console.error('Fehler beim Laden der JSON-Daten:', error));
 
     </script>
 </body>
+
 </html>
