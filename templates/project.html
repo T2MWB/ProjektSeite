@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='favicon.ico')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='projectstyle.css') }}">
-<script type="importmap">
+    <script type="importmap">
     {
       "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js",
@@ -13,13 +14,14 @@
       }
     }
     </script>
-<title>{{data}}</title>
+    <title>{{data}}</title>
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
             <!--<img src="/images/logo_192.png">-->
-            <a href="/"><img  style="width:150px" src="{{url_for('static', filename='tuelpLogo.png')}}"></a>
+            <a href="/"><img style="width:150px" src="{{url_for('static', filename='tuelpLogo.png')}}"></a>
         </div>
         <div id="projectTitle">
             <h1 id="bigTitle"></h1>
@@ -33,12 +35,13 @@
         </nav>
     </header>
 
-<div class="project-content">
-    <div id="project-image"></div>
-    <div id="status">
+    <div class="project-content">
+        <div id="project-image"></div>
+        <div id="status">
+        </div>
     </div>
-</div>
-<p id="disclaimer">3d model was abstracted. for representative use only.</p>
-<script type = "module" src="{{url_for('static', filename='project.js')}}"></script>
+    <p id="disclaimer">3d model was abstracted. for representative use only.</p>
+    <script type="module" src="{{url_for('static', filename='project.js')}}"></script>
 </body>
+
 </html>
